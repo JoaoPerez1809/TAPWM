@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>SecurityWeb</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #444;
+        color: #333;
+    }
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1d1d;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+    nav {
+        background-color: #444;
+        padding: 8px;
+        text-align: center;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 8px;
+    }
+    section {
+        padding: 15px;
+        margin: 15px;
+        background-color: #f3f3f3;   
+    }
+    .container {
+        width: 95%;
+        margin: auto;
+        padding: 2% 3%;
+        }
+    .container img {
+        max-width:400px;
+        max-height:300px;
+        width: auto;
+        height: auto;
+        border-radius: 15px;
+        border-color: #1c1d1d;
+    }
+    body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+header.dark-mode {
+    background-color: #1c1d1d;
+    color: #fff;
+}
+
+nav.dark-mode {
+    background-color: #333;
+}
+body.dark-mode section {
+    background-color: #1c1d1d; /* Altere a cor de fundo para o dark mode */
+    color: #fff; /* Altere a cor do texto para o dark mode */
+}
+button {
+    padding: 10px;
+    background-color: #1c1d1d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+    
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>SecurityWeb</h1>
+        <button onclick="modoescuro()">
+            <i class="fas fa-moon"></i> Modo Escuro
+        </button>
+    </header>
+<section>
+    <h2>Segurança na Web/Internet</h2>
+    <p>Segurança da Internet é um termo que descreve a segurança de atividades e transações feitas na Web. Trata-se de um componente particular de ideias maiores, como segurança virtual e segurança do computador, envolvendo tópicos que incluem segurança do navegador, comportamento on-line e segurança de rede.</p>
+    <div class="container">
+    <img src="img/SecurityWeb.jpg">
+    </div>
+    <p>As vulnerabilidades das aplicações web permitem que fatores maliciosos tenham controle não autorizado sobre o código-fonte, manipulem informações privadas.Tendo certos erros nas aplicações web que fazem o “hacker” ter acesso indevido na mesma.</p>
+    <h3>Ataque de Preenchimento de Credenciais </h3>
+    <p>Os hackers usam nomes de usuários, e-mails e senhas de lixeiras públicas da dark web para invadir e assumir as contas dos usuários. Os dados ilegais podem conter milhões de nomes de usuários e combinações de senhas, devido aos anos de violações de dados em diversos sites.</p>
+    <h3>O que é Segurança Web?</h3>
+    <p>Como uma área de cibersegurança, a segurança web se concentra em proteger sites, aplicativos baseados na internet e serviços online contra uma variedade de ataques maliciosos. Deste modo, ela serve para garantir o bom funcionamento e desempenho dos sites.</p>
+    <h4>Injeção de SQL</h4>
+    <p>Este tipo de falha permite que um cibercriminoso adultere uma consulta no banco de dados da aplicação através da injeção de um código. Na maioria dos ataques, os hackers conseguem acessar dados protegidos de usuários ou até mesmo da aplicação, como senhas, informações de cartão de crédito e cookies.</p>
+    <h4>Phishing </h4>
+    <div class="container">   
+    <img src="img/SecurityWeb1.jpg">
+    </div>
+    <p>É um ataque virtual envolvendo e-mails enganosos. Os hackers tentam enganar os remetentes dos e-mails para que acreditem que uma mensagem é genuína e relevante, uma solicitação do seu banco ou uma nota de um colega de trabalho, por exemplo, de forma que cliquem em um link ou abram um anexo. O objetivo é enganar as pessoas para que entreguem informações pessoais ou baixem malware.</p>
+    <h4>Hackeamento e acesso remoto </h4>
+    <p>Os hackers estão sempre procurando explorar uma rede privada ou vulnerabilidades do sistema, de forma que possam roubar informações e dados confidenciais. A tecnologia de acesso remoto dá a eles outro alvo a ser explorado. Os softwares de acesso remoto permitem que os usuários acessem e controlem um computador remotamente e, desde a pandemia, com mais pessoas trabalhando remotamente, sua utilização aumentou.</p>
+    <h4>Malware </h4>
+    <p>Malware é a combinação dos termos "malicious" (malicioso) e "software". É um termo amplo relacionado a vírus, worms, cavalos de Troia e outros programas danosos que os hackers usam para causar estragos e roubar informações confidenciais. Qualquer software criado para danificar um computador, servidor ou rede pode ser descrito como malware.</p>
+    <h3>Práticas Recomendadas</h3>
+    <p>As práticas recomendadas pra se navegar na web são diversas geralmente é envolvida para as pessoas:</p>
+    <h4>Verifique se os sites são seguros</h4>
+    <p>Verifique se os sites que você acessa têm um certificado SSL e usam o protocolo de segurança“https”, que é criptografado (o "http" não é). Essa é apenas uma etapa que pode ajudar a evitar golpes como o spoofing.</p>
+    <h4>Instale as atualizações de software mais recentes</h4>
+    <p>Cibercriminosos estão constantemente encontrando novos vetores de ataque. As atualizações de software mais recentes para seu dispositivo e aplicativos ajudam a corrigir riscos e vulnerabilidades de segurança.</p>
+    <h4>Faça backup de seus dados</h4>
+    <p>No caso de um ataque de malware ou falha do dispositivo, talvez seja necessário formatar o aparelho. O backup dos seus dados em um dispositivo de armazenamento externo e na nuvem pode ser um salva-vidas.</p>
+    <h3>Ferramentas</h3>
+    <p>Uma solução de segurança para aplicações web protege as empresas de ataques que visam tirar proveito das vulnerabilidades de código presentes em uma aplicação.</p>
+    <h4>Cloudflare</h4>
+    <p>Com a interface intuitiva da Cloudflare, os usuários podem identificar e analisar rapidamente os riscos de segurança, bloqueando quaisquer possíveis ameaças cibernéticas.</p>
+    <div class="container">
+    <img src="img/SecurityWeb2.png">
+    </div>
+    <p>Suas regras personalizadas de proteção firewall protegem seu site e APIs contra o tráfego malicioso, enquanto o log de atividades o ajudará a ajustar as configurações de segurança.</p>
+    <p>Impeça o uso de credenciais roubadas ou expostas que possam permitir o acesso de invasores à sua conta. Os serviços da Cloudflare também incluem um firewall para as aplicações web e proteção contra DDoS.</p>
+    <h4>StackHawk</h4>
+    <p>A StackHawk analisa seus aplicativos, serviços e APIs em busca de falhas de segurança no código ou em componentes de código aberto. Ela é muito eficiente na localização e correção dos erros, permitindo que os desenvolvedores da sua equipe repliquem o problema que provocou uma vulnerabilidade apenas copiando um comando cURL.</p>
+    <h4>Barracuda</h4>
+    <p>A Barracuda Cloud Application Protection protege suas aplicações de várias ameaças combinando recursos WAF completos com serviços e soluções de segurança avançados. Além de proteger as aplicações da web, a Barracuda também oferece soluções para proteger seu serviço de email com domínio, dados e rede.</p>
+    <h3>Tendencias</h3>
+    <p>A segurança da informação é uma preocupação cada vez maior para indivíduos e organizações. À medida que a tecnologia se torna mais complexa e os ataques cibernéticos se tornam mais sofisticados, é importante estar ciente das tendências que estão moldando o futuro da segurança da informação.</p>
+    <p>Essas tendências podem ter um impacto significativo em nosso dia a dia, afetando a maneira como as pessoas trabalham, se comunicam e se divertem.</p>
+    <h4>IA generativa democratizada</h4>
+    <p>A Inteligência Artificial (IA) tem desempenhado um papel cada vez mais crucial na segurança da informação, e a tendência para 2024 é a democratização da IA generativa.</p>
+    <p>A capacidade de gerar conteúdo de maneira autônoma e inovadora oferece oportunidades significativas para melhorar a segurança cibernética.</p>
+    <h4>Segurança Adaptável</h4>
+    <p>O mundo digital está em constante mudança, e as empresas precisam de uma abordagem de segurança que possa se adaptar a essas mudanças. A segurança adaptável é uma abordagem que usa inteligência artificial e machine learning para identificar e responder às ameaças em tempo real.</p>
+    <h4>Governança de dados</h4>
+    <p>A governança de dados é o processo de garantir que os dados sejam gerenciados de forma segura e eficiente. Essa é uma área importante de segurança da informação, pois os dados são um ativo valioso para as organizações.</p>
+</section>    
+<script>
+    function modoescuro() {
+        const body = document.body;
+
+        // Toggle entre dark mode e white mode
+        if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+        } else {
+            body.classList.add('dark-mode');
+        }
+    }
+</script>
+</body>
+</html>
