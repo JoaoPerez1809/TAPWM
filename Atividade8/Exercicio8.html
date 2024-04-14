@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8</title>
+</head>
+<body>
+    
+    Idade <input id="idade" type="number" min="0" max="120"> <br />
+    Sexo <select name="sexo" id="sexo">
+        <option value="Homem">Homem</option>
+        <option value="Mulher">Mulher</option>
+      </select>
+      <br>
+      Opinião <select name="opiniao" id="opiniao">
+        <option value="4">Ótimo</option>
+        <option value="3">Bom</option>
+        <option value="2">Regular</option>
+        <option value="1">Péssimo</option>
+      </select>
+      <button onclick="pesquisa()">Enviar</button>
+      <br><br>
+      <h2>Resultados da Pesquisa:</h2>
+      <p>Média das idades: <span id="mediaIdade"></span></p>
+      <p>Idade da pessoa mais velha: <span id="idadeMaisVelha"></span></p>
+      <p>Idade da pessoa mais nova: <span id="idadeMaisNova"></span></p>
+      <p>Quantidade de opinião péssima: <span id="qtdPessimo"></span></p>
+      <p>Porcentagem das respostas ótimo e bom: <span id="porcentagemOtimoBom"></span>%</p>
+      <p>Número de mulheres que responderam a pesquisa: <span id="qtdMulheres"></span></p>
+      <p>Número de homens que responderam a pesquisa: <span id="qtdHomens"></span></p>
+    <script>
+      let pesqresp = [];
+        
+        function pesquisa(){
+        const idade = parseInt(document.getElementById("idade").value);
+        const sexo = document.getElementById("sexo").value;
+        const opiniao = parseInt(document.getElementById("opiniao").value);
+        pesqresp.push({idade, sexo, opiniao});
+
+        resultados();
+        
+        }
+        function resultados(){
+          const idades = pesqresp.map(resultados => resultados.idade);
+          const somarIdades = idades.reduce((acc, idade) => acc + idade, 0);
+          
+          const mediaIdade = somarIdades / pesqresp.length;
+          document.getElementById("mediaIdade").textContent = mediaIdade;
+          
+          const idadeMaisVelha = Math.max(...idades);
+          document.getElementById("idadeMaisVelha").textContent = idadeMaisVelha;
+          
+          const idadeMaisNova = Math.min(...idades);
+          document.getElementById("idadeMaisNova").textContent = idadeMaisNova;
+          
+          const qtdPessimo = pesqresp.filter(resultados => resultados.opiniao === 1).length;
+          document.getElementById("qtdPessimo").textContent = qtdPessimo;
+          
+          const qtdOtimoBom = pesqresp.filter(resultados => resultados.opiniao >= 3).length;
+          const porcentagemOtimoBom = (qtdOtimoBom / pesqresp.length) * 100;
+          document.getElementById("porcentagemOtimoBom").textContent = porcentagemOtimoBom;
+          
+          const qtdMulheres = pesqresp.filter(resultados => resultados.sexo === "Mulher").length;
+          document.getElementById("qtdMulheres").textContent = qtdMulheres;
+          
+          const qtdHomens = pesqresp.filter(resultados => resultados.sexo === "Homem").length;
+          document.getElementById("qtdHomens").textContent = qtdHomens;
+        }
+
+    </script>
+</body>
+</html>
