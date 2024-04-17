@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triângulos</title>
+</head>
+<body>
+    Lado A <input id="ladoa" type="number"  > <br />
+    Lado B <input id="ladob" type="number" > <br />
+    Lado C <input id="ladoc" type="number" > <br />
+    <button onclick="CalcularTriangulo()">Calcular Triângulo</button>
+    <script>
+        function CalcularTriangulo(){
+        var a = parseInt(document.getElementById("ladoa").value);
+        var b = parseInt(document.getElementById("ladob").value);
+        var c = parseInt(document.getElementById("ladoc").value);
+
+        if (a + b > c && a + c > b && b + c > a){
+            alert("Os lados formam um triângulo");
+            if( a == b && a == c){
+                alert("É um triângulo Equilatero");
+            } else if(a == b || a == c || b == c){
+                alert("É um triângulo Isoceles");
+            } else{
+                alert("É um triângulo Escaleno");
+            }
+        } else {
+            alert("Não é um triângulo");
+        }
+    }
+    </script>
+</body>
+</html>
