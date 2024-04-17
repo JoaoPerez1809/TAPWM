@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo IMC</title>
+</head>
+<body>
+    Nome <input id="nome" type="text"> <br />
+    Peso Atual <input id="peso" type="number" step="0.1" > <br />
+    Altura <input id="altura" type="number" step="any"> <br />
+    <button onclick="CalcularIMC()">Calcular IMC</button>
+    <script>
+        function CalcularIMC(){
+        var nome = document.getElementById("nome").value;
+        var peso = parseFloat(document.getElementById("peso").value);
+        var altura = parseFloat(document.getElementById("altura").value);
+        var imc = (peso / (altura*altura)).toFixed(1);
+        
+        if (imc < 18.5){
+            alert("nome:" + nome + "\n IMC:" + imc + "\n Classificação:Magreza"
+            + "\nObesidade Grau: 0");
+        } else if (imc > 18.5 && imc <= 24.9){
+            alert("nome:" + nome + "\n IMC:" + imc + "\n Classificação:Normal"
+            + "\nObesidade Grau: 0");
+        } else if (imc >= 25.0 && imc <= 29.9){
+            alert("nome:" + nome + "\n IMC:" + imc + "\n Classificação:SobrePeso"
+            + "\nObesidade Grau: 1");
+        } else if (imc >= 30.0 && imc <= 39.9){
+            alert("nome:" + nome + "\n IMC:" + imc + "\n Classificação:Obesidade"
+            + "\nObesidade Grau: 2");
+        } else if (imc >= 40.0 ){
+            alert("nome:" + nome + "\n IMC:" + imc + "\n Classificação:Obesidade Grave"
+            + "\nObesidade Grau: 3");
+        } 
+    }
+    </script>
+</body>
+</html>
