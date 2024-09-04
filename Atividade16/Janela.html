@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Janela</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            width: 450px;
+            height: auto;
+            cursor: pointer;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Janela Fechada</h1>
+    <img id="janela" src="janelaFechada.png" alt="Janela Fechada"
+         onmousedown="quebrarJanela(this)"
+         onmouseover="abrirJanela(this)"
+         onmouseout="fecharJanela(this)">
+
+    <script type="text/javascript" src="Janela.js"></script>
+</body>
+</html>
