@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Checkbox</title>
+</head>
+<body>
+    Texto <input id="texto" type="text"><br>
+
+    Transformar Texto Maiúscula <input id="maiusculas" type="checkbox" onchange="transformarTexto()"><br>
+    Transformar Texto Minúsculo <input id="minusculas" type="checkbox" onchange="transformarTexto()"><br>
+        
+    <script>
+        function transformarTexto() {
+            var texto = document.getElementById('texto');
+            var maiusculas = document.getElementById('maiusculas');
+            var minusculas = document.getElementById('minusculas');
+
+            if (maiusculas.checked) {
+                minusculas.disabled = true;
+                texto.value = texto.value.toUpperCase();
+            } 
+            
+            else if (minusculas.checked) {
+                maiusculas.disabled = true;
+                texto.value = texto.value.toLowerCase();
+            }
+            
+            else {
+                maiusculas.disabled = false;
+                minusculas.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
